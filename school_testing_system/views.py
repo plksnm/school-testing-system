@@ -84,6 +84,7 @@ def createUser(request):
 def testing(request, task_id):
     task = Tasks.objects.get(pk = task_id)
     template = loader.get_template('school_testing_system/task.html')
+    test_dict = {}; i = 0
     context = {
         'task':task,
         's':"ok"
