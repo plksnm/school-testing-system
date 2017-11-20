@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TASKS LIST</title>
+		<link rel="stylesheet" type="text/css" href='/static/css/school_testing_system.css'>
+	</head>
+	<body>
+
+
+{% if tlist %}
+<ul>
+	{% for task in tlist %}
+			<li><a href="{{ task.id }}/" style = "color:#00FF00">{{ task.name }}</a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+	</body>
+</html>

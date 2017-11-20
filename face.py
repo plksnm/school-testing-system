@@ -28,6 +28,7 @@ def FileOpen():
 def Testing():
 	test_dict = {}; i = 0
 	for input in glob.glob(dir_input):
+
 		f_in = open(input,'r')
 		try:
 			f_out = open(glob.glob(dir_output)[i])

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TASKS</title>
+		<link rel="stylesheet" type="text/css" href='/static/css/school_testing_system.css'>
+	</head>
+
+	<body>
+		<div class = "center">
+		<form class = "login_form" action="createUser" method="POST">
+		<p>Логин</p>
+		<input name = "username" type="text" value={{username}}>
+		{% if error.login != "" %}
+				<p style="color: red;">
+					{{error.login}}
+				</p>
+		{% endif %}
+		<p>Электронная почта</p>
+		<input name = "email" type = "text" value = {{email}}>
+		{% if error.email != "" %}
+				<p style="color: red;">
+					{{error.email}}
+				</p>
+		{% endif %}
+		<p>Пароль</p>
+		<input name = "password" type="password" value = {{password}}>
+		{% if error.password != "" %}
+				<p style="color: red;">
+					{{error.password}}
+					<img id = "school_dropout"  src = "https://media.giphy.com/media/a2z8MYEbf5qKc/source.gif">
+				</p>
+		{% endif %}
+		<br>
+		<button type = "submit">Зарегистрироваться</button>
+	</div>
+	</body>
+</html>

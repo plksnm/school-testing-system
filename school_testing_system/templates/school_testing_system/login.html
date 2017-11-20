@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TASKS</title>
+		<link rel="stylesheet" type="text/css" href='/static/css/school_testing_system.css'>
+	</head>
+
+	<body>
+		{% if error %}
+				<p style="color: red;">
+						Неправильный логин или пароль
+				</p>
+		{% endif %}
+		<form class = "login_form" action="auth" method="POST">
+		<p>Логин</p>
+		<input name = "username" type="text">
+		<p>Пароль</p>
+		<input name = "password" type="password">
+		<button type = "submit">Войти</button>
+
+
+
+	</form>
+	</body>
+</html>

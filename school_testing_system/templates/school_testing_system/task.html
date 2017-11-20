@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TASKS</title>
+		<link rel="stylesheet" type="text/css" href='/static/css/school_testing_system.css'>
+	</head>
+	{% if task %}
+		<form class = "task_form" action = "testing" method = "POST">
+			<p>{{ task.name }}</p>
+			<p>{{ task.text }}</p>
+			<select>
+				<option disabled>Выберите язык программирования</option>
+				<option value="python">Python3.6</option>
+				<option value="pascal">Pascal.NET</option>
+			</select>
+			<input type = "file" name = "f_input" accept=".py, .pas"> <br>
+			<button type = "submit">Отправить</button>
+		</form>
+
+	{% else %}
+	    <p>No polls are available.</p>
+	{% endif %}
+	{% if s != ""%}
+	 {{s}}
+	{% endif %}
+	<body>
+		<p></p>
+	</body>
+</html>
